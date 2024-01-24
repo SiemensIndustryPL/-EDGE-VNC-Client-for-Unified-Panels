@@ -27,6 +27,13 @@ Simple Edge application working as VNC client for connecting with Sm@rt Server b
 
 ### Extablishing connection
 1. Open app on your panel by clicking the proper tile in your Edge Management.
-2. Enter connection data - address of your Sm@rt Server and port number (default port is 5900, you can change it in Sm@rt Server settings) and click **Connect** button.
-3. If the server is accessible in you network and connection data was correct, you will be prompted for access password.
+   
+   ![Application tile in Edge Management](https://github.com/SiemensIndustryPL/-EDGE-VNC-Client-for-Unified-Panels/blob/main/src/apptile.png)
+3. Enter connection data - address of your Sm@rt Server and port number (default port is 5900, you can change it in Sm@rt Server settings) and click **Connect** button.
+   
+   ![Connection window](https://github.com/SiemensIndustryPL/-EDGE-VNC-Client-for-Unified-Panels/blob/main/src/connectionwindow.png)
+5. If the server is accessible in you network and connection data was correct, you will be prompted for password. If the password is correct, you should have access to the runtime and panel OS.
+
+### Credits
+Main core of the application is noVNC Library distributed under MPL 2.0 license. You can find it here: [noVNC on GitHub](https://github.com/novnc/noVNC)
 
