@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VNC Client for Unified Panels</title>
+    <link rel="stylesheet" id="css-cdn" href="css/mdsp-css.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="uxt uxt-defaults forceDefaultElements">
+
+<style>
+    .uxt-defaults .callToAction.callToAction--demoBg1 { background: linear-gradient(90deg, rgba(var(--color-info-light), 1) 37%, rgba(var(--color-aquaHaze), 1) 100%); }
+    .btnLarge { width: 100%; margin: 20px auto !important; height: 48px; }
+</style>
+
+<div class="dialog is-shown dialog--frameless">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__container">
+        <div class="dialog__background">
+            <section class="dialog__content">
+                <div class="callToAction callToAction--demoBg1 callToAction--defaultBgBright">
+                    <div class="callToAction__visual">
+                        <img src="assets/images/plant.svg" alt="image placeholder" />
+                    </div>
+
+                    <h2 class="callToAction__title">
+                        Connect with Sm@rt Server
+                    </h2>
+                    <div class="callToAction__callToAction">
+                        <form class="form">
+                            <div class="form__formGroup">
+                                    <input class="inputGroup__textInput" type="text" placeholder="Server address" id="address" required>
+                                    <input class="inputGroup__textInput" type="number" placeholder="Port number" id="port" value="5900" required>
+                                    <a class="button button--primary btnLarge" href="javascript:connect();" style>
+                                        <span class="iconUxt link" aria-hidden="true"></span>Connect
+                                    </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script>
+    function connect() {
+
+        var ip = window.location.protocol + '//' + window.location.host.split(':')[0]
+        console.log(ip)
+        var address = document.getElementById("address").value
+        var port = document.getElementById("port").value
+
+        if (address != '' && port != '' && address != null && port != null) {
+            location.replace(`${ip}:38081/vnc.html?host=${address}&autoconnect=true&port=${port}`)
+        }
+    }
+</script>
+
+
+</body>
+</html>

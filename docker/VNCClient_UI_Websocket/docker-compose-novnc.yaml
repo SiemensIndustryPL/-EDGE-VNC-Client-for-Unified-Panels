@@ -1,0 +1,17 @@
+version: '2.4'
+services:
+
+  # Backend
+  novnc:
+    image: javanile/novnc
+    ports:
+      - 38081:8081
+    links:
+      - ui
+    mem_limit: 200mb
+
+  # Frontend
+  ui:
+    image: vncclient_ui:0.1
+    ports:
+      - 38080:80
