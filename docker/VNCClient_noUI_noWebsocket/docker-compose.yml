@@ -1,0 +1,18 @@
+version: "2.4"
+
+services:
+  vncclient:
+    image: gotget/novnc
+
+    # Set if you want to start the app automatically after Edge Runtime startup - otherwise, comment the line
+    restart: always
+
+    # Set the port for an VNC CLient application. Under this port, the app will be available.
+    # You only change the first port number, before ":" character,
+    # e.g. instead of 36082 you can set any other value from range 30k-40k
+    # The port must be unique within the Edge device
+    ports:
+      - "36082:6080"
+      
+    # IP address of the panel you want to connect
+    command: --vnc 10.44.173.23:5901
