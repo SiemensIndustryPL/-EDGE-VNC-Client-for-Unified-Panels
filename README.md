@@ -9,7 +9,7 @@ Simple Edge application working as VNC client for connecting with Sm@rt Server b
 1. [Download compiled .app file](https://github.com/SiemensIndustryPL/-EDGE-VNC-Client-for-Unified-Panels/raw/main/VNCClient_ForUnifiedPanels.app?download=) from this repository using web browser or execute command `git clone https://github.com/SiemensIndustryPL/-EDGE-VNC-Client-for-Unified-Panels.git` if you have Git installed on your computer.
 2. Go to **Apps -> SIMATIC Edge -> Open edge management** section on the panel or type the panel IP address in web browser to open the Edge Management on your computer.
 3. Log into your Edge Management using login and password configured in the WinCC project.
-4. Click **Install Offline** button which can be found in the top right corner oy the Edge Management.
+4. Click **Install Offline** button which can be found in the top right corner of the Edge Management.
 5. Select file from the panel storage (eg. external USB device) or browse your computer files, depending on where you have opened the Management.
 6. Skip the configuration tab and install the file.
 7. Go to Management tab and Start the application (it does not start automatically).
