@@ -12,6 +12,7 @@ services:
 
   # Frontend
   ui:
-    image: vncclient_ui:0.1
+    image: vncclient_ui:0.1 #Insert name:tag of the image created by means of included Dockerfile
     ports:
       - 38080:80
+    mem_limit: 50mb
